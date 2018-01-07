@@ -16,8 +16,9 @@ public class MySQLConnectionTest {
 	public void testConnection() throws Exception {
 		Class.forName(DRIVER);
 		
-		try(Connection con = DriverManager.getConnection(URL, USER, PW)) {
-			
+		//try(Connection con = DriverManager.getConnection(URL, USER, PW)) {
+		try {
+			Connection con = DriverManager.getConnection(URL, USER, PW);
 		}catch(Exception e){
 			e.printStackTrace();
 		}
